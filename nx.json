@@ -43,6 +43,12 @@
       "tags": [],
       "implicitDependencies": ["client"]
     },
+    "core-data": {
+      "tags": []
+    },
+    "core-state": {
+      "tags": []
+    },
     "ui-toolbar": {
       "tags": []
     }

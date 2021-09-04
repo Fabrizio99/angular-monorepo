@@ -1,4 +1,5 @@
 import { AntDesignModule } from '@angular-monorepo/ant-design';
+import { CoreDataModule } from '@angular-monorepo/core-data';
 import { UiToolbarModule } from '@angular-monorepo/ui-toolbar';
 import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,7 +16,7 @@ registerLocaleData(es);
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule, FormsModule, BrowserAnimationsModule, AntDesignModule, UiToolbarModule],
+  imports: [BrowserModule, HttpClientModule, FormsModule, BrowserAnimationsModule, AntDesignModule, UiToolbarModule, CoreDataModule],
   providers: [{ provide: NZ_I18N, useValue: es_ES }],
   bootstrap: [AppComponent],
 })
