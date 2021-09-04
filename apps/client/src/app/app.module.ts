@@ -1,20 +1,21 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { NZ_I18N } from 'ng-zorro-antd/i18n';
-import { es_ES } from 'ng-zorro-antd/i18n';
+import { AntDesignModule } from '@angular-monorepo/ant-design';
+import { UiToolbarModule } from '@angular-monorepo/ui-toolbar';
 import { registerLocaleData } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import es from '@angular/common/locales/es';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { es_ES, NZ_I18N } from 'ng-zorro-antd/i18n';
+import { AppComponent } from './app.component';
+
 
 registerLocaleData(es);
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule, FormsModule, BrowserAnimationsModule],
+  imports: [BrowserModule, HttpClientModule, FormsModule, BrowserAnimationsModule, AntDesignModule, UiToolbarModule],
   providers: [{ provide: NZ_I18N, useValue: es_ES }],
   bootstrap: [AppComponent],
 })

@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "ant-design": {
+      "tags": []
+    },
     "api": {
       "tags": []
     },
@@ -39,6 +42,9 @@
     "client-e2e": {
       "tags": [],
       "implicitDependencies": ["client"]
+    },
+    "ui-toolbar": {
+      "tags": []
     }
   }
 }
