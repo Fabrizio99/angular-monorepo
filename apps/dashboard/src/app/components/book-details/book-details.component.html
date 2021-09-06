@@ -1,0 +1,31 @@
+<nz-card>
+  <form nz-form>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Name is required">
+        <input nz-input formControlName="name" placeholder="Name" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Author is required">
+        <input nz-input formControlName="author" placeholder="Author" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Year is required">
+        <input nz-input formControlName="year" placeholder="Year" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Image link is required">
+        <input nz-input formControlName="Image" placeholder="Image link" />
+      </nz-form-control>
+    </nz-form-item>
+    <button
+      nz-button
+      nzBlock
+      nzType="primary"
+    >
+      Save
+    </button>
+  </form>
+</nz-card>
