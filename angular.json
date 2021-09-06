@@ -295,7 +295,7 @@
               }
             ],
             "styles": [
-              "apps/client/src/theme.less",
+              "apps/dashboard/src/theme.less",
               "apps/dashboard/src/styles.scss"
             ],
             "scripts": []

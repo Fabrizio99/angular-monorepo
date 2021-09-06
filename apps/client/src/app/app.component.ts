@@ -1,5 +1,7 @@
+import { Book } from '@angular-monorepo/api-interfaces';
 import { BooksService } from '@angular-monorepo/core-data';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'angular-monorepo-root',
@@ -7,11 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit{
-  
+  books$!: Observable<Book[]>;
+
   constructor(private booksService: BooksService) {}
 
   ngOnInit(): void {
-    this.booksService.all()
-      .subscribe( resp => console.log(resp))
+    this.loadBooks();
+  }
+
+  loadBooks() {
+    this.books$ = this.booksService.all();
   }
 }

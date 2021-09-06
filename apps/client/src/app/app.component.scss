@@ -1,0 +1,17 @@
+.container {
+    &__content {
+        margin-top: 64px;
+    }
+    &__books {
+        display: grid;
+        grid-template-columns: repeat(3, 250px);
+        row-gap: 10px;
+        justify-content: center;
+        margin-top: 100px;
+        justify-items: center;
+
+        nz-card{
+            width: 240px;
+        }
+    }
+}

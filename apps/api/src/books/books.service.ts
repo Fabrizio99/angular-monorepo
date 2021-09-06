@@ -9,19 +9,22 @@ export class BooksService {
       id: '1',
       name: 'Travesuras de la niña mala',
       author: 'Mario Vargas Llosa',
-      year: 2006
+      year: 2006,
+      image: 'https://imagessl9.casadellibro.com/a/l/t5/59/9788420469959.jpg'
     },
     {
       id: '2',
       name: 'Atomic Habits',
       author: 'James Clear',
-      year: 2008
+      year: 2008,
+      image: 'https://images-na.ssl-images-amazon.com/images/I/81iAADNy2NL.jpg'
     },
     {
       id: '3',
       name: 'The Defining Decade',
       author: 'Meg Jay',
-      year: 2012
+      year: 2012,
+      image: 'https://m.media-amazon.com/images/I/513QvEoS1aL.jpg'
     },
   ]
 

@@ -10,4 +10,5 @@ export interface Book extends BaseEntity {
   name: string;
   author: string;
   year: number;
+  image: string;
 }

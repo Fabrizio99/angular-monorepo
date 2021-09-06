@@ -1,4 +1,15 @@
-<nz-layout>
+<div class="container">
     <angular-monorepo-toolbar></angular-monorepo-toolbar>
-    Cliente
-</nz-layout>
+    <div class="container__content">
+        <div class="container__books">
+            <div *ngFor="let book of books$ | async" class="container__book">
+                <nz-card nzHoverable [nzCover]="coverTemplate">
+                    <nz-card-meta [nzTitle]="book.name" [nzDescription]="book.author"></nz-card-meta>
+                </nz-card>
+                <ng-template #coverTemplate>
+                    <img alt="example" [src]="book.image" class="container__book__image"/>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

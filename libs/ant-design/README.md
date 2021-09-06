@@ -1,7 +1,3 @@
 # ant-design
 
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test ant-design` to execute the unit tests.
+To use the styles.less file styles on your Angular app, you have to create a theme.less (if does not exist) and import it.
