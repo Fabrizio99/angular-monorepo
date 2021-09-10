@@ -1,29 +1,38 @@
 <nz-card>
-  <form nz-form>
+  <form #form="ngForm" nz-form (submit)="saved.emit(currentBook)">
     <nz-form-item>
       <nz-form-control nzErrorTip="Name is required">
-        <input nz-input formControlName="name" placeholder="Name" />
+        <input nz-input placeholder="Name" type="text" [(ngModel)]="currentBook.name"/>
       </nz-form-control>
     </nz-form-item>
     <nz-form-item>
       <nz-form-control nzErrorTip="Author is required">
-        <input nz-input formControlName="author" placeholder="Author" />
+        <input nz-input placeholder="Author" [(ngModel)]="currentBook.author"/>
       </nz-form-control>
     </nz-form-item>
     <nz-form-item>
       <nz-form-control nzErrorTip="Year is required">
-        <input nz-input formControlName="year" placeholder="Year" />
+        <input nz-input placeholder="Year" [(ngModel)]="currentBook.year" type="number"/>
       </nz-form-control>
     </nz-form-item>
     <nz-form-item>
       <nz-form-control nzErrorTip="Image link is required">
-        <input nz-input formControlName="Image" placeholder="Image link" />
+        <input nz-input placeholder="Image link" [(ngModel)]="currentBook.image"/>
       </nz-form-control>
     </nz-form-item>
     <button
       nz-button
       nzBlock
+      nzType="default"
+      (click)="form.reset();cancelled.emit()"
+    >
+      Cancel
+    </button>
+    <button
+      nz-button
+      nzBlock
       nzType="primary"
+      [disabled]="form.invalid"
     >
       Save
     </button>

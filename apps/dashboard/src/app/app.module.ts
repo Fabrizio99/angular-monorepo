@@ -2,8 +2,10 @@ import { AntDesignModule } from '@angular-monorepo/ant-design';
 import { CoreDataModule } from '@angular-monorepo/core-data';
 import { CoreStateModule } from '@angular-monorepo/core-state';
 import { UiToolbarModule } from '@angular-monorepo/ui-toolbar';
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { es_ES, NZ_I18N } from 'ng-zorro-antd/i18n';
@@ -19,6 +21,8 @@ import { BookPageComponent } from './pages/book-page/book-page.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CommonModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     AntDesignModule,

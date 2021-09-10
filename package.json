@@ -11,7 +11,7 @@
     "serve:client": "nx serve client -o",
     "serve:dashboard": "nx serve dashboard --port=4400 -o",
     "serve:api": "nx serve api",
-    "serve:all": "concurrently \"npm run serve:api\" \"npm run serve:client\""
+    "serve:all": "concurrently \"npm run serve:api\" \"npm run serve:dashboard\""
   },
   "private": true,
   "dependencies": {
