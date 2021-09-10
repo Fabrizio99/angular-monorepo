@@ -2,9 +2,15 @@
     <div class="container__block">
         <angular-monorepo-books-list
             [books]="(books$ | async)!"
+            (edited)="selectBook($event)"
+            (deleted)="deleteBook($event)"
         ></angular-monorepo-books-list>
     </div>
     <div class="container__block">
-        <angular-monorepo-book-details></angular-monorepo-book-details>
+        <angular-monorepo-book-details
+            [book]="selectedBook$ | async"
+            (saved)="saveBook($event)"
+            (cancelled)="resetForm()"
+        ></angular-monorepo-book-details>
     </div>
 </div>

@@ -1,30 +1,23 @@
 <nz-card>
   <form #form="ngForm" nz-form (submit)="saved.emit(currentBook)">
     <nz-form-item>
-      <nz-form-control nzErrorTip="Name is required">
-        <input nz-input placeholder="Name" type="text" [(ngModel)]="currentBook.name"/>
-      </nz-form-control>
+      <input nz-input name="name" placeholder="Name" type="text" [(ngModel)]="currentBook.name" required/>
     </nz-form-item>
     <nz-form-item>
-      <nz-form-control nzErrorTip="Author is required">
-        <input nz-input placeholder="Author" [(ngModel)]="currentBook.author"/>
-      </nz-form-control>
+      <input nz-input name="author" placeholder="Author" [(ngModel)]="currentBook.author" required/>
     </nz-form-item>
     <nz-form-item>
-      <nz-form-control nzErrorTip="Year is required">
-        <input nz-input placeholder="Year" [(ngModel)]="currentBook.year" type="number"/>
-      </nz-form-control>
+      <input nz-input name="year" placeholder="Year" [(ngModel)]="currentBook.year" type="number" required/>
     </nz-form-item>
     <nz-form-item>
-      <nz-form-control nzErrorTip="Image link is required">
-        <input nz-input placeholder="Image link" [(ngModel)]="currentBook.image"/>
-      </nz-form-control>
+      <input nz-input name="image" placeholder="Image link" [(ngModel)]="currentBook.image" required/>
     </nz-form-item>
     <button
       nz-button
       nzBlock
       nzType="default"
       (click)="form.reset();cancelled.emit()"
+      type="button"
     >
       Cancel
     </button>

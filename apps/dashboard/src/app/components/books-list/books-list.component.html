@@ -15,9 +15,9 @@
       <td>{{ data.year }}</td>
       <td>{{ data.image }}</td>
       <td *ngIf="!readOnly">
-        <a>Edit</a>
+        <a (click)="edited.emit(data)">Edit</a>
         <nz-divider nzType="vertical"></nz-divider>
-        <a>Delete</a>
+        <a (click)="deleted.emit(data)">Delete</a>
       </td>
     </tr>
   </tbody>

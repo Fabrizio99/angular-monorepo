@@ -1,5 +1,5 @@
 import { Book } from '@angular-monorepo/api-interfaces';
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { BooksService } from './books.service';
 
 @Controller('books')
@@ -21,7 +21,7 @@ export class BooksController {
     return this.booksService.findOne(id);
   }
 
-  @Patch(':id')
+  @Put(':id')
   update(@Param('id') id: string, @Body() book: Book) {
     return this.booksService.update(id, book);
   }
